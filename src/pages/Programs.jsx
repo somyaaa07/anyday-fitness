@@ -3,21 +3,24 @@ import PageHero from "../components/PageHero";
 import Button from "../components/Button";
 import { programs } from "../data/programs";
 import CTASection from "../components/CTASection";
+import FacilitiesSection from "../components/FacilitiesSection";
 
 export default function Programs() {
   return (
     <>
       <PageHero
-        eyebrow="Training Programs"
+        eyebrow="Training Programs & Services"
         title="Train With"
         highlight="Purpose"
-        description="Whether your goal is building strength, gaining muscle, improving mobility, or enhancing overall performance, our expert-led programs are designed to meet you where you are and push you toward where you want to be."
+        description="Whether your goal is building strength, gaining muscle, improving mobility, or enhancing overall performance, our expert-led programs and premium in-house services are designed to meet you where you are and push you toward where you want to be."
         image="/programsbanner1.png"
         primaryBtnText="Start Your Journey"
         primaryBtnLink="/contact"
         secondaryBtnText="Discover Our Story"
         secondaryBtnLink="/about"
       />
+
+
 
       <section className="py-16 sm:py-24">
         <div className="container-x flex flex-col gap-16 sm:gap-24">
@@ -91,6 +94,7 @@ export default function Programs() {
           })}
         </div>
       </section>
+            <FacilitiesSection />
 
       <CTASection />
     </>

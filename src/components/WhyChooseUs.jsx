@@ -1,16 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Dumbbell, Award, UserCheck, Clock, Apple, Users } from "lucide-react";
+import { Dumbbell, Award, Snowflake, Building2, HeartPulse, Coffee } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ReasonRow from "./ReasonRow";
 import StatCard from "./StatCard";
 
 const reasons = [
   {
-    icon: Dumbbell,
-    title: "Premium Equipment",
-    description: "Top-tier machines and free weights, maintained to hotel-grade standards.",
+    icon: Building2,
+    title: "18,000+ Sq.Ft. Facility",
+    description: "One of the most spacious, luxurious gym floors in Greater Noida West.",
     accent: "primary",
   },
   {
@@ -20,27 +20,27 @@ const reasons = [
     accent: "secondary",
   },
   {
-    icon: UserCheck,
-    title: "Personalized Training",
-    description: "Programs built around your goals, schedule, and starting point.",
+    icon: Dumbbell,
+    title: "Matrix & Thor USA Equipment",
+    description: "45+ workout stations built on premium Matrix and Thor USA gear.",
     accent: "primary",
   },
   {
-    icon: Clock,
-    title: "24/7 Access",
-    description: "Train on your schedule. Doors never close, anyday or anytime.",
+    icon: Snowflake,
+    title: "Steam, Sauna & Ice Bath",
+    description: "A full recovery suite to help you train harder and recover faster.",
     accent: "secondary",
   },
   {
-    icon: Apple,
-    title: "Nutrition Guidance",
-    description: "Science-backed nutrition coaching to complement every workout.",
+    icon: HeartPulse,
+    title: "4D Massage & Physiotherapy",
+    description: "On-site massage chairs and physiotherapy for injury care and relief.",
     accent: "primary",
   },
   {
-    icon: Users,
-    title: "Community",
-    description: "A driven, welcoming member base that pushes you to show up.",
+    icon: Coffee,
+    title: "In-House Cafe & Lounge",
+    description: "Refuel and unwind in our dedicated cafe and lounge area.",
     accent: "secondary",
   },
 ];

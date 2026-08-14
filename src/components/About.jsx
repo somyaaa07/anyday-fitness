@@ -2,17 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import { CheckCircle2, Dumbbell } from "lucide-react";
 
 const features = [
-  "State-of-the-art equipment imported globally",
+  "Matrix USA & Thor USA equipment across 45+ stations",
   "Certified trainers with personalized attention",
-  "Flexible 24/7 access for every schedule",
-  "Clean, spacious, member-first environment",
+  "Steam, sauna, ice bath & 4D massage recovery zone",
+  "In-house cafe, lounge and on-site physiotherapy",
 ];
 
 const stats = [
-  { number: "10+", label: "Years Running" },
-  { number: "150+", label: "Expert Trainers" },
-  { number: "5,000+", label: "Members Trained" },
-  { number: "50+", label: "Programs Offered" },
+  { number: "18,000+", label: "Sq.Ft. Area" },
+  { number: "45+", label: "Workout Stations" },
+  { number: "12+", label: "Premium Amenities" },
+  { number: "Upto 50%", label: "Launch Offer" },
 ];
 
 const marqueeWords = ["STRENGTH", "DISCIPLINE", "ANYDAY", "ANYTIME", "NO LIMITS"];
