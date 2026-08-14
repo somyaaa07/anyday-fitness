@@ -7,7 +7,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/programs", label: "Programs" },
-  { to: "/trainers", label: "Trainers" },
+  // { to: "/trainers", label: "Trainers" },
   { to: "/membership", label: "Membership" },
   { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
@@ -32,7 +32,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-black/90 backdrop-blur-md border-b border-white/10 py-2"
-          : "bg-gradient-to-b from-black/70 to-transparent py-4"
+          : "bg-gradient-to-b from-black/70 to-transparent py-3 sm:py-4"
       }`}
     >
       <nav className="container-x flex items-center justify-between">
@@ -66,11 +66,12 @@ export default function Navbar() {
         </div>
 
         <button
-          className="lg:hidden text-offwhite"
+          className="lg:hidden text-offwhite -mr-2 p-2"
           onClick={() => setOpen(true)}
           aria-label="Open menu"
         >
-          <Menu size={28} />
+          <Menu size={24} className="sm:hidden" />
+          <Menu size={28} className="hidden sm:block" />
         </button>
       </nav>
 
@@ -87,18 +88,18 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         />
         <div
-          className={`absolute top-0 right-0 h-full w-[78%] max-w-xs bg-surface border-l border-white/10 p-6 flex flex-col gap-8 transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-[82%] sm:w-[60%] max-w-xs bg-surface isolate transform-gpu shadow-2xl border-l border-white/10 p-5 sm:p-6 flex flex-col gap-6 sm:gap-8 overflow-y-auto transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="flex items-center justify-between">
             <Logo />
-            <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-offwhite">
-              <X size={26} />
+            <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-offwhite -mr-2 p-2">
+              <X size={24} />
             </button>
           </div>
 
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-4 sm:gap-5">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <NavLink
@@ -106,7 +107,7 @@ export default function Navbar() {
                   end={link.to === "/"}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `font-rajdhani font-semibold uppercase tracking-wide text-lg ${
+                    `font-rajdhani font-semibold uppercase tracking-wide text-base sm:text-lg ${
                       isActive ? "text-primary" : "text-offwhite/85"
                     }`
                   }
@@ -120,7 +121,7 @@ export default function Navbar() {
           <NavLink
             to="/membership"
             onClick={() => setOpen(false)}
-            className="btn-primary justify-center mt-auto"
+            className="btn-primary justify-center mt-auto text-sm"
           >
             Join Now
           </NavLink>

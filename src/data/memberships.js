@@ -64,4 +64,21 @@ export const membershipFaqs = [
     q: "Is personal training included?",
     a: "Trainer sessions are included based on your plan. Additional sessions can be purchased separately.",
   },
+  {
+    q: "Can I cancel my membership anytime?",
+    a: "Yes, all plans are month-to-month with no long-term lock-in. You can cancel anytime from your account dashboard with no cancellation fees.",
+  },
+  {
+    q: "Do you offer a free trial?",
+    a: "Yes, we offer a one-day free trial pass so you can experience the facility, equipment, and a session with a trainer before committing to a plan.",
+  },
+  {
+    q: "What happens if I miss my trainer sessions?",
+    a: "Unused trainer sessions do not roll over to the next month, so we recommend scheduling them in advance through the app or front desk.",
+  },
+  {
+    q: "Is there a discount for annual payment?",
+    a: "Yes, paying annually gets you two months free compared to the monthly rate. Ask our front desk team for current annual pricing.",
+  },
+
 ];

@@ -17,12 +17,12 @@ export default function ReasonRow({ number, icon: Icon, title, description, acce
       <span className="hidden sm:block font-teko text-5xl font-semibold text-white/5 leading-none select-none shrink-0 w-14">
         {number}
       </span>
-
+{/* 
       <div
         className={`w-12 h-12 shrink-0 flex items-center justify-center rounded-full border ${accentClasses} transition-all duration-300`}
       >
         <Icon size={22} strokeWidth={1.75} />
-      </div>
+      </div> */}
 
       <div className="flex flex-col gap-1.5 pt-1">
         <h3 className="font-rajdhani font-bold text-heading uppercase tracking-wide text-lg">

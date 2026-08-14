@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
-          <Route path="/trainers" element={<Trainers />} />
+          {/* <Route path="/trainers" element={<Trainers />} /> */}
           <Route path="/membership" element={<Membership />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />

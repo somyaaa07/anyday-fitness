@@ -1,18 +1,19 @@
 import { Check } from "lucide-react";
+import Button from "./Button";
 
 export default function PricingCard({ plan }) {
   const { name, price, period, popular, features } = plan;
 
   return (
     <div
-      className={`relative flex flex-col rounded-lg p-8 transition-all duration-300 ${
+      className={`relative flex flex-col rounded-xl p-8 transition-all duration-300 ${
         popular
           ? "bg-surface border-2 border-primary shadow-glow lg:scale-105 z-10"
-          : "bg-surface border border-secondary/40 hover:border-secondary"
+          : "bg-surface border border-white/10 hover:border-white/25"
       }`}
     >
       {popular && (
-        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-black font-rajdhani font-bold text-xs uppercase tracking-widest px-4 py-1 rounded-full">
+        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-black font-rajdhani font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
           Most Popular
         </span>
       )}
@@ -25,27 +26,35 @@ export default function PricingCard({ plan }) {
         {name}
       </h3>
 
-      <div className="flex items-end gap-1 mt-4 mb-6">
-        <span className="font-teko text-5xl font-bold text-offwhite leading-none">
+      <div className="flex items-end gap-1.5 mt-5 mb-1">
+        <span className="font-teko text-5xl font-bold text-offwhite leading-none tabular-nums">
           {price}
         </span>
         <span className="font-rajdhani text-muted text-sm mb-1">{period}</span>
       </div>
 
-      <ul className="flex flex-col gap-3 mb-8 flex-1">
+      <div className="h-px bg-white/10 my-6" />
+
+      <ul className="flex flex-col gap-3.5 mb-8 flex-1">
         {features.map((f) => (
-          <li key={f} className="flex items-center gap-2.5 text-sm text-body font-inter">
-            <Check size={16} className="text-primary shrink-0" />
+          <li key={f} className="flex items-center gap-3 text-sm text-body font-inter">
+            <span
+              className={`shrink-0 w-5 h-5 flex items-center justify-center rounded-full ${
+                popular ? "bg-primary/20 text-primary" : "bg-white/5 text-muted"
+              }`}
+            >
+              <Check size={12} strokeWidth={3} />
+            </span>
             {f}
           </li>
         ))}
       </ul>
 
       <button
-        className={`font-rajdhani font-bold uppercase tracking-wide py-3 rounded-md transition-all duration-300 ${
+        className={`w-full font-rajdhani font-bold uppercase tracking-wide py-3.5 rounded-md transition-all duration-300 ${
           popular
             ? "bg-primary text-black hover:bg-primaryDark hover:shadow-glow"
-            : "bg-transparent border border-secondary/60 text-offwhite hover:border-primary hover:text-primary"
+            : "bg-transparent border border-white/15 text-offwhite hover:border-primary hover:text-primary"
         }`}
       >
         Choose Plan

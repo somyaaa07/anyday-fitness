@@ -12,7 +12,7 @@ export default function Programs() {
         title="Train With"
         highlight="Purpose"
         description="Whether your goal is building strength, gaining muscle, improving mobility, or enhancing overall performance, our expert-led programs are designed to meet you where you are and push you toward where you want to be."
-        image="/programsbanner.png"
+        image="/programsbanner1.png"
         primaryBtnText="Start Your Journey"
         primaryBtnLink="/contact"
         secondaryBtnText="Discover Our Story"
@@ -29,11 +29,11 @@ export default function Programs() {
               <div
                 key={program.id}
                 className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-                  reversed ? "lg:[&>*:first-child]:order-2" : ""
+                  reversed ? "lg:[&>*:first-child]:order-1" : ""
                 }`}
               >
                 {/* Image */}
-                <div className="relative group">
+                <div className="relative group order-2">
              
                   <div className="relative  overflow-hidden border border-white/10 h-[320px] sm:h-[420px]">
                     <img
@@ -47,7 +47,7 @@ export default function Programs() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col gap-5 relative">
+                <div className="flex flex-col gap-5 relative order-1">
                        <span className="absolute -top-6 -right-2 sm:-top-8 sm:-right-4 font-teko font-black text-[100px] sm:text-[140px] leading-none text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.08)] select-none pointer-events-none z-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>

@@ -6,7 +6,7 @@ export default function CTASection() {
       <div className="container-x">
         <div className="relative grid lg:grid-cols-2 rounded-2xl overflow-hidden border border-white/10">
           <div className="relative bg-surface flex flex-col justify-center px-8 sm:px-14 py-16 lg:py-0 gap-6 z-10">
-            <div className="absolute -left-10 top-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-primary/10 blur-3xl" />
+            {/* <div className="absolute -left-10 top-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-primary/10 blur-3xl" /> */}
             <span className="eyebrow relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-[2px] before:bg-primary">
               No Excuses
             </span>
