@@ -212,7 +212,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className={`mt-6 font-inter text-body text-[11px] sm:text-[11px] max-w-md transition-all duration-700 delay-200 ${
+            className={`mt-6 font-inter text-body text-sm sm:text-base max-w-md transition-all duration-700 delay-200 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
@@ -247,13 +247,13 @@ export default function Hero() {
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <div className="grid grid-cols-4 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-white/10">
+          <div className="grid grid-cols-2 xs:grid-cols-4 divide-x divide-y xs:divide-y-0 divide-white/10">
             {stats.map((s) => (
-              <div key={s.label} className="py-6 px-3 sm:px-6">
-                <div className="font-teko text-xl sm:text-2xl font-bold text-heading tabular-nums">
+              <div key={s.label} className="py-4 sm:py-6 px-3 sm:px-6">
+                <div className="font-teko text-xl sm:text-2xl lg:text-3xl font-bold text-heading tabular-nums">
                   {s.number}
                 </div>
-                <div className="font-rajdhani text-[9px] uppercase tracking-[0.15em] text-muted mt-1">
+                <div className="font-rajdhani text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.15em] text-muted mt-1">
                   {s.label}
                 </div>
               </div>
@@ -263,14 +263,14 @@ export default function Hero() {
 
         {/* benefits row */}
         <div
-          className={`flex flex-wrap gap-x-10 gap-y-5 py-6 px-6 border-t border-white/10 transition-opacity duration-700 delay-700 ${
+          className={`flex flex-wrap gap-x-6 sm:gap-x-10 gap-y-4 sm:gap-y-5 py-5 sm:py-6 px-1 sm:px-6 border-t border-white/10 transition-opacity duration-700 delay-700 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
           {benefits.map((b) => (
             <div key={b.title} className="flex items-center gap-2.5">
               <b.icon size={18} className="text-primary shrink-0" strokeWidth={2} />
-              <span className="font-rajdhani text-[9px] sm:text-[9px] font-semibold text-body uppercase tracking-wide">
+              <span className="font-rajdhani text-xs sm:text-sm font-semibold text-body uppercase tracking-wide">
                 {b.title}
               </span>
             </div>

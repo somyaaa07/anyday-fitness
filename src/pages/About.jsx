@@ -108,7 +108,7 @@ export default function About() {
       />
 
       {/* Single floating quote card — clean, no clipping/overlap issues */}
-      <div className="absolute -bottom-8 -left-6 sm:-left-8 max-w-[260px] rounded-xl border border-white/10 bg-surface p-5 shadow-2xl">
+      <div className="absolute -bottom-8 left-3 right-3 xs:right-auto xs:-left-4 sm:-left-8 max-w-[260px] rounded-xl border border-white/10 bg-surface p-5 shadow-2xl">
         <p className="font-teko text-lg text-heading leading-snug">
           "We built the space we always wished existed."
         </p>

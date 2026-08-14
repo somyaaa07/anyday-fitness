@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .font-teko {
+    font-family: 'Teko', sans-serif;
+  }
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -36,19 +48,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .eyebrow {
-  @apply font-rajdhani font-semibold tracking-[0.25em] text-primary text-xs sm:text-sm uppercase;
+  font-family: 'Rajdhani', sans-serif;
+  @apply font-semibold tracking-[0.25em] text-primary text-xs sm:text-sm uppercase;
 }
 
 .section-heading {
-  @apply font-teko font-semibold text-heading uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl;
+  font-family: 'Teko', sans-serif;
+  @apply font-semibold text-heading uppercase leading-[0.95] text-4xl sm:text-5xl lg:text-6xl;
 }
 
 .btn-primary {
-  @apply inline-flex items-center gap-2 bg-primary text-black font-rajdhani font-bold uppercase tracking-wide px-7 py-3 rounded-md hover:bg-primaryDark transition-all duration-300 hover:shadow-glow;
+  font-family: 'Rajdhani', sans-serif;
+  @apply inline-flex items-center gap-2 bg-primary text-black font-bold uppercase tracking-wide px-7 py-3 rounded-md hover:bg-primaryDark transition-all duration-300 hover:shadow-glow;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center gap-2 bg-transparent border border-secondary/60 text-offwhite font-rajdhani font-bold uppercase tracking-wide px-7 py-3 rounded-md hover:border-primary hover:text-primary transition-all duration-300;
+  font-family: 'Rajdhani', sans-serif;
+  @apply inline-flex items-center gap-2 bg-transparent border border-secondary/60 text-offwhite font-bold uppercase tracking-wide px-7 py-3 rounded-md hover:border-primary hover:text-primary transition-all duration-300;
 }
 
 .card-dark {

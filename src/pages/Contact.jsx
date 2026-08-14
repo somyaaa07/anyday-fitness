@@ -87,7 +87,7 @@ function ContactFaqItem({ q, a, index }) {
           }`}
         >
           <div className="overflow-hidden">
-            <p className="font-inter text-sm text-body pl-[3.75rem] sm:pl-[4.75rem] pr-14 pb-5 -mt-1">
+            <p className="font-inter text-sm text-body pl-[3rem] sm:pl-[4.75rem] pr-4 sm:pr-14 pb-5 -mt-1">
               {a}
             </p>
           </div>

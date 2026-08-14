@@ -12,7 +12,7 @@ export default function PageHero({
   secondaryBtnLink,
 }) {
   return (
-    <section className="relative h-[500px] xl:h-[600px] md:h-[600px] lg:h-[700px] overflow-hidden ">
+    <section className="relative h-[420px] xs:h-[460px] sm:h-[520px] md:h-[600px] lg:h-[700px] overflow-hidden">
       {image && (
         <>
           <img
@@ -20,11 +20,11 @@ export default function PageHero({
             alt=""
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/85 to-bg/50" /> */}
+          <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/85 to-bg/50" />
         </>
       )}
 
-      <div className="container-x relative flex flex-col items-start gap-3 sm:gap-4 sm:pt-[190px] xs:pt-[240px] pt-[170px] md:pt-[200px] lg:pt-[200px] xl:pt-[200px]">
+      <div className="container-x relative flex flex-col items-start gap-3 sm:gap-4 pt-[150px] xs:pt-[170px] sm:pt-[190px] md:pt-[210px] lg:pt-[220px]">
         {eyebrow && (
           <span className="eyebrow text-xs sm:text-sm">{eyebrow}</span>
         )}
@@ -35,16 +35,17 @@ export default function PageHero({
         </h1>
 
         {description && (
-          <p className="font-inter text-[11px] sm:text-[11px] text-body max-w-sm sm:max-w-sm">
+          <p className="font-inter text-[11px] sm:text-base text-body max-w-[90%] xs:max-w-sm">
             {description}
           </p>
         )}
 
         {(primaryBtnText || secondaryBtnText) && (
-<div className="flex flex-row lg:flex-row md:flex-row sm:flex-col items-center gap-3 sm:gap-4 mt-3 sm:mt-4 w-full sm:w-auto">            {primaryBtnText && (
+          <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 mt-3 sm:mt-4 w-full xs:w-auto">
+            {primaryBtnText && (
               <Link
                 to={primaryBtnLink || "#"}
-                className="text-center font-inter font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-primary text-white hover:opacity-90 transition text-sm sm:text-base"
+                className="text-center font-inter font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-primary text-white hover:opacity-90 transition text-[10px] sm:text-base"
               >
                 {primaryBtnText}
               </Link>
@@ -52,7 +53,7 @@ export default function PageHero({
             {secondaryBtnText && (
               <Link
                 to={secondaryBtnLink || "#"}
-                className="text-center font-inter font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-md border border-heading text-heading hover:bg-heading hover:text-bg transition text-sm sm:text-base"
+                className="text-center font-inter font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-md border border-heading text-heading hover:bg-heading hover:text-bg transition text-[10px] sm:text-base"
               >
                 {secondaryBtnText}
               </Link>
