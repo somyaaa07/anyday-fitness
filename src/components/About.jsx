@@ -44,12 +44,12 @@ export default function About() {
       `}</style>
 
       {/* Giant watermark numeral — signature element */}
-      <span
+      {/* <span
         aria-hidden="true"
         className="pointer-events-none select-none absolute -top-10 sm:-top-20 right-0 sm:right-10 font-teko font-black text-[240px] sm:text-[400px] leading-none text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.06)]"
       >
         10
-      </span>
+      </span> */}
 
       <div className="container-x relative">
         {/* Header row — asymmetric, editorial */}

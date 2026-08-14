@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Dumbbell, Award, UserCheck, Clock, Apple, Users } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ReasonRow from "./ReasonRow";
@@ -43,6 +46,16 @@ const reasons = [
 ];
 
 export default function WhyChooseUs() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % reasons.length);
+    }, 2500); // change speed here (ms)
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative py-20 sm:py-28 bg-surface2/80 overflow-hidden">
       {/* <div className="absolute top-0 right-0 w-[420px] h-[420px] rounded-full bg-primary/10 blur-3xl pointer-events-none" /> */}
@@ -68,8 +81,6 @@ export default function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
             </div>
-
-      
           </div>
 
           {/* Reasons list */}
@@ -78,6 +89,7 @@ export default function WhyChooseUs() {
               <ReasonRow
                 key={r.title}
                 number={String(i + 1).padStart(2, "0")}
+                isActive={i === activeIndex}
                 {...r}
               />
             ))}

@@ -1,25 +1,42 @@
-export default function ReasonRow({ number, icon: Icon, title, description, accent = "primary" }) {
-  const accentClasses =
+export default function ReasonRow({
+  number,
+  icon: Icon,
+  title,
+  description,
+  accent = "primary",
+  isActive = false, // new prop — controlled by parent for auto-cycle
+}) {
+  const accentColorClasses =
     accent === "primary"
-      ? "border-primary/50 text-primary group-hover:bg-primary group-hover:text-black"
-      : "border-secondary/50 text-secondary group-hover:bg-secondary group-hover:text-black";
+      ? "border-primary/50 text-primary"
+      : "border-secondary/50 text-secondary";
+
+  const accentActiveClasses =
+    accent === "primary"
+      ? "group-hover:bg-primary group-hover:text-black"
+      : "group-hover:bg-secondary group-hover:text-black";
 
   return (
-    <div className="group relative flex items-start gap-5 py-6 border-t border-white/10 last:border-b transition-colors duration-300 hover:bg-white/[0.02] px-2 -mx-2 rounded-md">
+    <div
+      className={`group relative flex items-start gap-5 py-6 border-t border-white/10 last:border-b transition-colors duration-300 px-2 -mx-2 rounded-md ${
+        isActive ? "bg-white/[0.02]" : "hover:bg-white/[0.02]"
+      }`}
+    >
       {/* accent bar */}
       <span
-        className={`absolute left-0 top-0 h-full w-[2px] scale-y-0 group-hover:scale-y-100 origin-center transition-transform duration-300 ${
-          accent === "primary" ? "bg-primary" : "bg-secondary"
-        }`}
+        className={`absolute left-0 top-0 h-full w-[2px] origin-center transition-transform duration-300 ${
+          isActive ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"
+        } ${accent === "primary" ? "bg-primary" : "bg-secondary"}`}
       />
 
       {/* number watermark */}
       <span className="hidden sm:block font-teko text-5xl font-semibold text-white/5 leading-none select-none shrink-0 w-14">
         {number}
       </span>
-{/* 
+
+      {/*
       <div
-        className={`w-12 h-12 shrink-0 flex items-center justify-center rounded-full border ${accentClasses} transition-all duration-300`}
+        className={`w-12 h-12 shrink-0 flex items-center justify-center rounded-full border ${accentColorClasses} ${accentActiveClasses} transition-all duration-300`}
       >
         <Icon size={22} strokeWidth={1.75} />
       </div> */}
